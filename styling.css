@@ -144,13 +144,13 @@ h1,h3{
     margin: 0.5em 0;
 }
 
-
+/*
 @media screen and(max-width:768){
     .city{
         color:black;
     }
-}
-/* @media(max-width:768){
+}*/
+ @media(max-width:768){
     .search-panel, .container{
         position: relative;
         width: 100%;
@@ -167,4 +167,4 @@ h1,h3{
     .weather-app{
         min-height: 40em;
     }
-} */
+} 
