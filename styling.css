@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    
+}
+
+h1,h3{
+    font-weight: 400;
+    color: #fff;
+}
+
+.weather-app{
+    min-height: 100vh;
+    background-image: url(./assets/cloudy-night.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: 500ms;
+    opacity: 1;
+} 
+.weather-app::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0);
+    z-index: 0;
+}
+.search-panel{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0 8px 32px 0 rgba(110,110,110,0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.18);
+    z-index: 1;
+    padding: 2em 3em;
+    overflow-y: scroll;
+}
+.search-panel .form{
+    margin-bottom: 3em;
+}
+.submit{
+    position: absolute;
+    top:0.75em;
+    padding: 1em;
+    margin: 0;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    background: gray;
+    color:#fff;
+    font-size: 1em;
+    transition: 0.4s;
+}
+.submit:hover{
+    background: #fff !important;
+    color:#000
+}
+.search{
+    background: none;
+    border:none;
+    border-bottom: 1px #ccc solid;
+    padding: 0 1em 0.5em 0;
+    width:80%;
+    color:#fff;
+    font-size: 1.1em;
+}
+.search:focus{
+    outline: none;
+}
+.search::placeholder{
+    color:#ccc;
+}
+.search-panel ul{
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    border-bottom: 1px #ccc solid;
+}
+
+.search-panel ul li{
+    color: #ccc;
+    margin: 2.5em 0;
+}
+.search-panel ul h4{
+    margin:3em 0;
+}
+.city{
+    display: block;
+    cursor: pointer;
+    color: #FFF;
+}
+.city-name:hover{
+    color:#fa6d1b;
+}
+.detail li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    color: white;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 2em 3em 4em 3em;
+}
+.container >div{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.city_and_time,.temprature,.weather{
+    margin: 0 1em;
+}
+.city_and_time h1{
+    margin: 0;
+    margin-bottom: 0.2em;
+    font-size: 3em;
+}
+.temprature{
+    font-size: 7em;
+    margin: 0;
+}
+.weather img{
+    display: block;
+    margin: 0.5em 0;
+}
+
+
+@media screen and(max-width:768){
+    .city{
+        color:black;
+    }
+}
+/* @media(max-width:768){
+    .search-panel, .container{
+        position: relative;
+        width: 100%;
+        top: initial;
+    }
+}
+@media(max-width:576){
+    html{
+        font-size: 12px;
+    }
+}
+
+@media(max-height:300){
+    .weather-app{
+        min-height: 40em;
+    }
+} */
